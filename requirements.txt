@@ -1,0 +1,32 @@
+# Core data + IO
+pandas
+pyarrow
+duckdb
+httpx
+certifi
+python-dotenv
+pyyaml
+tenacity
+tqdm
+
+# Wallet leaderboard scraping (collectors/collect_provider_a_wallets.py)
+playwright
+
+# Solana streaming + RPC
+grpcio
+protobuf
+
+# Optional: ML qualifier (default ML_MODE=shadow doesn't require sklearn at runtime,
+# but training and bootstrap dataset building use it)
+scikit-learn
+
+# Live execution (only needed if ENABLE_AUTO_TRADING=true)
+solders
+base58
+
+# Local dashboard (src/dashboard/)
+fastapi
+uvicorn[standard]
+
+# HTTP collectors
+requests

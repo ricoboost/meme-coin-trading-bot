@@ -1,0 +1,23 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [
+    "src/monitoring/yellowstone_proto/generated",
+    "data",
+    "outputs",
+    "models",
+]
+
+[tool.ruff.lint]
+# Default ruff rule set, minus a few that conflict with this codebase's
+# established style. To run a stricter check, pass `--select E,F,I,UP,B`
+# explicitly.
+ignore = [
+    # Long lines are tolerated — many docstrings and log messages exceed
+    # the line-length limit and rewrapping them adds noise without value.
+    "E501",
+    # Unused-local warnings are tolerated. The existing code uses them as
+    # intentional captures (debugger breakpoints, planned-future-use,
+    # scope discipline). Address case-by-case if you reach for them.
+    "F841",
+]

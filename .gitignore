@@ -1,0 +1,52 @@
+# Environment + secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project data — do NOT commit your wallet pool, scrapes, models, or run state
+data/
+outputs/
+models/
+notebooks/.ipynb_checkpoints/
+*.parquet
+*.csv.gz
+*.db
+*.db-journal
+events.jsonl
+
+# Playwright
+.playwright/
+playwright-report/
+test-results/
