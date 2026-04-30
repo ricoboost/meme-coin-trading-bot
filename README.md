@@ -26,10 +26,9 @@ A few things to set expectations:
   educational value, not as an endorsement of the approach.
 - If you're reading the code: start at [`src/bot/main.py`](./src/bot/main.py),
   follow the imports into [`src/bot/runner.py`](./src/bot/runner.py) and
-  [`src/strategy/`](./src/strategy/). The `src/transforms/` and
-  `src/analysis/` packages are the offline (Phase 1) research pipeline; the
-  runtime bot lives under `src/bot/`, `src/strategy/`, `src/execution/`,
-  `src/portfolio/`.
+  [`src/strategy/`](./src/strategy/). The `src/transforms/` package is the
+  offline dataset pipeline; the runtime bot lives under `src/bot/`,
+  `src/strategy/`, `src/execution/`, `src/portfolio/`.
 - `pyproject.toml` configures `ruff` with the project's accepted style. The
   repo passes `ruff check` and `ruff format --check` on every file outside
   `src/monitoring/yellowstone_proto/generated/` (auto-generated protobuf).

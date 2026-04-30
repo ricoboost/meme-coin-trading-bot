@@ -83,7 +83,6 @@ Brief role for each top-level package under `src/`.
 | `src/clients/` | API clients. `helius_client.py` for the Helius Enhanced API (transaction history). |
 | `src/collectors/` | Offline wallet-data ingestion. `refresh_wallet_pool.py` is the union/scoring step that produces `wallet_pool.parquet`. The four `collect_provider_X_wallets.py` files are templates — bring your own data source. |
 | `src/transforms/` | Phase-1 dataset pipelines: normalize wallet trades, build the token universe, build entry features, label outcomes. |
-| `src/analysis/` | Pattern stats, rule mining, exploratory dataset prep. Rule artifacts under `outputs/rules/` feed the runtime rule matcher. |
 | `src/notifications/` | Optional Telegram alerts on entries/exits. |
 | `src/dashboard/` | Self-contained local web UI (FastAPI + Jinja2 + HTMX). Reads `data/live/bot_state.db` and `data/live/events.jsonl` for live monitoring. |
 | `src/utils/` | Config loading, logging, time + dataset helpers, app initialization. |
@@ -113,7 +112,7 @@ this bot.**
 - `data/live/bot_state.db` — SQLite, all positions/executions/risk state.
 - `data/live/events.jsonl` — append-only structured event log.
 - `data/bronze/`, `data/silver/`, `data/gold/` — phase-1 datasets, owned
-  by `src/transforms/` and `src/analysis/`.
+  by `src/transforms/`.
 - `outputs/` — rule packs, regime metadata, research summaries. The
   runtime loads from `outputs/rules/pump_rule_packs_v2.csv` by default
   (override via `PUMP_RULES_PATH`).

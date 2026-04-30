@@ -45,8 +45,9 @@ pair-first mode — that's a deliberate change from the older
 
 ### Rule matching
 
-Every candidate is fed through a rule set produced offline by Phase-1
-analysis (`src/analysis/rule_mining.py` →
+Every candidate is fed through a rule set produced offline (the rule
+mining pipeline that generated these is not included in this
+distribution; the runtime consumes the resulting CSV at
 `outputs/rules/pump_rule_packs_v2.csv`). Rules are simple feature
 thresholds — token age, 30s volume, cluster size, price-impact bands,
 etc. — plus a regime tag and a historical hit-rate.
